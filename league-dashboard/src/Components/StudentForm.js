@@ -21,7 +21,7 @@ const StudentForm = (props) => {
         <div className='form-wrapper'>
             <Formik {...props} validationSchema={validationSchema}>
                 <Form>
-                    <FormGroup>
+                    <FormGroup className='inputF'>Name:
                         <Field name='name' type='text'
                             className='form-control' />
                         <ErrorMessage
@@ -30,7 +30,16 @@ const StudentForm = (props) => {
                             component='span'
                         />
                     </FormGroup>
-                    <FormGroup>
+                    <FormGroup className='inputF'>Email:
+                        <Field name='email' type='text'
+                            className='form-control' />
+                            <ErrorMessage
+                                name='email'
+                                className='d-block invalid-feedback'
+                                component='span'
+                            />
+                    </FormGroup>
+                    <FormGroup className='inputF'>Roll No.
                         <Field name='rollno' type='number'
                             className='form-control' />
                         <ErrorMessage
