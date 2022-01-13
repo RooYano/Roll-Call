@@ -26,6 +26,10 @@ const StudentTableRow = (props) => {
             <td>{email}</td>
             <td>{rollno}</td>
             <td>
+                <Link className='edit-link'
+                    to={'/edit-student/' + _id}>
+                    edit
+                </Link>
                 <Button onClick={deleteStudent}
                 size='sm' variant='danger'>
                     Delete

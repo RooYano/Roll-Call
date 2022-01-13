@@ -21,6 +21,20 @@ const CreateStudent = () => {
                     .catch(err=> alert('Something went wrong'))
     }
 
+    useEffect(() => {
+        axios   
+            .get(
+                    'http://localhost:3000/students/update-student/'
+                    + props.match.params.id
+                    
+            )
+            .then((res)=> {
+                const { name, email, rollno } = res.data;
+                setFormValues({ name, email, rollno});
+            })
+            .catch((err) => console.log(err));
+    },[]);
+
     return(
         <StudentForm initialValues={formValues}
             onSubmit={onSubmit}
