@@ -22,6 +22,7 @@ const StudentList = () => {
             return <StudentTableRow obj={res} key={i} />
         });
     };
+  
 
     return (
         <div className='table-wrapper'>

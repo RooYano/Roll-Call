@@ -18,22 +18,8 @@ const CreateStudent = () => {
                             Promise.reject();
                         }
                     })
-                    .catch(err=> alert('Something went wrong'))
+                    .catch(err=> alert('Something went wrong2'))
     }
-
-    useEffect(() => {
-        axios   
-            .get(
-                    'http://localhost:3000/students/update-student/'
-                    + props.match.params.id
-                    
-            )
-            .then((res)=> {
-                const { name, email, rollno } = res.data;
-                setFormValues({ name, email, rollno});
-            })
-            .catch((err) => console.log(err));
-    },[]);
 
     return(
         <StudentForm initialValues={formValues}
