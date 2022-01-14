@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# League Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I am attempting to create a web app in the form of a customizable dashboard to keep track of popular League of Legends Pro players. I want something that I can choose which players to follow and provides their match schedule all in one screen. Maybe create box modules that include things such as their soloQ match history, recent performance in a progame, their next matchup against another player you follow, and status if the player is currently streaming on twitch. With these boxes, I can lay them out however I want on my dashboard. The bustom dashboard should be saved to individual user's account so add username/password login. 
+My stack is MongoDB/Express/React/Node.js   
+ ##Phase 1  
+-Have a working frontend-backend (using https://www.geeksforgeeks.org/how-to-build-a-basic-crud-app-with-node-js-and-reactjs/ as a template)  
+-Use lol-esports-api to pull schedule data from lolesports.com  
+-Create interface to tie players to their respective teams  
+-Add log in feature  
 
-## Available Scripts
+##Phase 2  
+-Create the box modules  
+-Add function to add more boxes or delete boxes  
+-Make it move around  
 
-In the project directory, you can run:
+##Phase 3
+-Add chat feature like twitch so you can have this dashboard open while watching with friends?  
+-AAdd SoloQ performance or search features to look up stats from progames or their SoloQ games  
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
