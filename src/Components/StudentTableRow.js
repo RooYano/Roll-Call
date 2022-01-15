@@ -12,6 +12,7 @@ const StudentTableRow = (props) => {
                 'http://localhost:3000/students/delete-student' + _id)
                 .then((res) => { 
                     if (res.status === 200) {
+                        console.log('broke at studenttabletrow.ujs')
                         alert('student successfully deleted');
                         window.location.reload();
 
