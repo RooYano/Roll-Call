@@ -9,7 +9,7 @@ const StudentTableRow = (props) => {
     const deleteStudent = () => {
         axios
             .delete(
-                'http://localhost:3000/students/delete-student' + _id)
+                'http://localhost:3000/students/delete-student/' + _id)
                 .then((res) => { 
                     if (res.status === 200) {
                         console.log('broke at studenttabletrow.js')

@@ -8,7 +8,6 @@ let dbConfig = require('./database/db');
 
 const studentRoute = require('../backend/routes/student.routes')
 
-
 //connecting the db
 mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.db).then(()=> {
@@ -35,7 +34,7 @@ const server = app.listen(port, () => {
 
 // 404 error
 app.use((req,res,next) => {
-    res.status(404).send('Error 404')
+    res.status(404).send('Error 404 lol')
 });
 
 app.use(function (err,req, res, next) {
