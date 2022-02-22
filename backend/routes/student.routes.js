@@ -17,14 +17,29 @@ router.post('/create-student', (req, res,  next) => {
 });
 
 // read 
-router.get('/', (req,res) => {
-    studentSchema.findOne((error,data) => {
-        if (error) {
-            return next(error);
-        } else {
-            res.json(data);
-        }
-    });
+// router.get('/', (req,res) => {
+//     studentSchema.findOne((error,data) => {
+        
+//         if (error) {
+//             return next(error);
+//         } else {
+//             res.json(data);
+//         }
+        
+//     });
+// });
+
+router.get('/',(req, res) => {
+    studentSchema.find((error, data) => {
+            if (error) {
+                return next(error);
+            }
+            if (!data.length) {
+                return next(error);
+            }
+
+            return res.json(data);
+        }).catch(error => console.log(error));
 });
 
 // update

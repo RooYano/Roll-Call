@@ -12,7 +12,7 @@ const EditStudent = (props) => {
     const onSubmit = (studentObject) => {
         axios
             .put(
-                'http://localhost:3000/students/update-student' +
+                'http://localhost:3000/students/update-student/' +
                     props.match.params.id,
                 studentObject
             )
@@ -28,7 +28,7 @@ const EditStudent = (props) => {
     useEffect(() => {
         axios
             .get(
-                'http://localhost:3000/students/update-student'
+                'http://localhost:3000/students/update-student/'
                 + props.match.params.id
             )
             .then((res) => {

@@ -10,19 +10,19 @@ const StudentList = () => {
         axios
             .get('http://localhost:3000/students/')
             .then(({data}) => {
+                console.log('studlent-list component ' + data)
                 setStudents([data]) ;
             })
             .catch((error) => {
                 console.log(error);
             })
-    }, []);
+    },[]);
 
-    const DataTable = (students) => {
-        
-        console.log(JSON.stringify(students));
-        return students.map((res, i) => {
-            return <StudentTableRow obj={res} key={i} />
-        });
+    const DataTable = () => {
+        console.log(students);
+            return (
+                students[0].map((res, i) => (<StudentTableRow obj={res} key ={i} />)
+        ));
     };
   
 
@@ -37,7 +37,7 @@ const StudentList = () => {
                         <th>Action</th>
                     </tr>
                 </thead>
-                <tbody>{DataTable(students)}</tbody>
+                <tbody>{DataTable()}</tbody>
             </Table>
         </div>
     );
