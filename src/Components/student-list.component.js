@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Table } from 'react-bootstrap';
 import StudentTableRow from './StudentTableRow';
 
+
 const StudentList = () => {
     const [students, setStudents] = useState([]);
 
@@ -10,18 +11,20 @@ const StudentList = () => {
         axios
             .get('http://localhost:3000/students/')
             .then(({data}) => {
-                console.log('studlent-list component ' + data)
-                setStudents([data]) ;
+                setStudents([data]);
             })
             .catch((error) => {
                 console.log(error);
-            })
+            });
     },[]);
 
     const DataTable = () => {
-        console.log(students);
-            return (
-                students[0].map((res, i) => (<StudentTableRow obj={res} key ={i} />)
+        console.log('log ' + students.length);
+        if (students.length == 0) {
+            return;
+        } 
+        return (
+               students[0].map((res, i) => (<StudentTableRow obj={res} key ={i} />)
         ));
     };
   
