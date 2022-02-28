@@ -6,6 +6,8 @@ import axios from 'axios';
 const StudentTableRow = (props) => {
     const { _id, name, email, rollno } = props.obj;
 
+    console.log(props.obj);
+
     const deleteStudent = () => {
         axios
             .delete(
